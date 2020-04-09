@@ -1,0 +1,95 @@
+%%\usepackage[T1]{fontenc}
+%%\usepackage[ttdefault=true]{AnonymousPro}
+\usepackage{inconsolata}
+\usepackage[T1]{fontenc}
+
+
+\usepackage{listings}
+%\usepackage{color}
+
+\lstdefinelanguage{Clean}{%
+    alsoletter={ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_^`},%
+    alsoletter={~!@\#\$\%^\&*-+=?<>:|\\.},%
+   morekeywords={generic,implementation,definition,dynamic,module,import,from,while,then,else,where,in,of,case,let,infix,infixr,infixl,class,instance,with,if,derive,otherwise},%
+%    otherkeywords={=,.,!,|,\&,\#,\\,=>,->,::,=:,\\\\,:==},%
+    sensitive=true,%
+    morecomment=[l]{//},%
+    morecomment=[n]{/*}{*/},%
+    morestring=[b]",%
+    morestring=[b]',%
+    emptylines=1,%
+%    basicstyle=\scriptsize,%
+    basicstyle=\small,%
+%    identifierstyle=\sffamily,%
+    identifierstyle=\ttfamily,%
+    commentstyle=\itshape,%
+    keywordstyle={\sffamily\bfseries},%
+%    keywordstyle={\ttfamily\bfseries},%
+    stringstyle=\ttfamily,%
+    numbers=none,%
+    showstringspaces=false,%
+%    basewidth=0.50em,%
+    basewidth=0.50em,%
+    columns=[c]fixed,%
+    keepspaces=true,%
+    breaklines=false,%
+%    breakindent=40pt,%
+%    prebreak={\space...},%
+%    postbreak={...\space},%
+    tabsize=2,%
+    texcl=true,%
+    escapeinside={(\#}{\#)},%
+    literate=   {\\}{{$\lambda$}}1%
+                {A.}{{$\forall$}}1%
+                {E.}{{$\exists$}}1%
+                {<=}{{$\leq$}}1%
+                {>=}{{$\geq$}}1%
+                {<>}{{$\neq$}}1%
+                {->}{{$\rightarrow$}}2%
+                {|->}{{$\mapsto$}}2%
+                {=}{{$=$}}1%
+                {=>}{{$\Rightarrow$}}2%
+                {<-}{{$\leftarrow$}}2%
+                {==}{{${=\!\!\!=}$}}2%
+                {=->}{{$\Rrightarrow$}}2%
+                {==>}{{$\Longrightarrow$}}3%
+%                {~}{{$\neg$}}1%
+                {~~}{{$\approx$}}2%
+                {~/~}{{$\ncong$}}2%
+                {<~}{{$\lesssim$}}2%
+                {</~}{{$\lesssim\!\!\!\!\!/\ $}}2%
+                {\#}{{$\sharp$}}1%
+                {\{|}{{$\!\{\!|$}}1%
+                {|\}}{{$\,|\!\}$}}1%
+                {<->}{{$\leftrightarrow$}}2%
+                {<|>}{{$\updownarrow$}}2%
+                {/.\\}{{$\wedge\!\!\!.\,$}}1%
+                {/\\}{{$\wedge$}}1%
+                {\\./}{{$\vee\!\!\!\cdot\,$}}1%
+                {\\.n}{$\backslash$n}2%
+                {\\n}{$\backslash$n}2%
+                {\\"}{$\backslash$"}2%
+                {\\t}{$\backslash$t}2%
+                {\\\\t}{$\backslash$t}2%
+                {\\\\}{$\backslash$t}1%
+                {>>>}{{$>\!\!>\!\!>$}}2%
+                {>>==}{{$>\!\!>==$}}5%
+                {>>=}{{$>\!\!>=$}}3%
+                {>>=.}{{$>\!\!>=\mathbf{.}$}}4%
+%                {>>=.}{{$>\!\!>=\mathbf{.}$}}5%
+                {:.}{{$:\!.$}}2%
+                {***}{{$*\!\!*\!\!*$}}2%
+                {\&\&\&}{{$\&\!\!\&\!\!\&$}}2%
+                {<<<}{{$<\!\!<\!\!<$}}2%
+                {\{|*|\}}{{$\{\!|\!\!\star\!\!|\!\}$}}3%
+}%
+%
+\lstdefinestyle{numbers}{numbers=right, stepnumber=1, numberstyle=\tiny, numbersep=-7pt}
+\lstnewenvironment{CleanCode}{\lstset{language=Clean}}{}%
+\lstnewenvironment{CleanCodeN}{\lstset{language=Clean,style=numbers}}{}%
+\lstnewenvironment{CleanCodeNB}{\lstset{language=Clean,style=numbers,frame=single}}{}%
+\lstnewenvironment{CleanCodeB}{\lstset{language=Cleanframe=single}}{}%
+%
+\newcommand{\CleanInline}[1]{\lstinline[language=Clean]$#1$}%
+\newcommand{\Cl}[1]{\lstinline[language=Clean]$#1$}%
+\newcommand{\prog}[1]{\lstinline[language=Clean]$#1$}%
